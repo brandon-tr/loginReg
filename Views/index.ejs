@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Reg</h1>
+
+    <br>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        First Name<input type="text" name="first_name" id=""><br>
+        Last Name<input type="text" name="last_name" id=""><br>
+        Email <input type="text" name="email" id=""><br>
+        Password <input type="text" name="password" id=""><br>
+        Conf Password <input type="text" name="confpassword" id=""><br>
+        Birthday <input type="date" name="birthday" id=""><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+    <br><br>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <input type="text" name="email" id=""><br>
+        <input type="text" name="password" id=""><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+    <% if(typeof(errors) != 'undefined'){ %>
+        <% for (x in errors) %>
+            <h3><%=  errors[x].message %></h3>
+    <%}%>
+    <% if(typeof(errorss) != 'undefined'){ %>
+        <h3><%=  errorss %></h3>
+    <%}%>
+</body>
+</html>
